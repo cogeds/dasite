@@ -36,6 +36,7 @@
     border-radius: 8px;
     overflow: hidden;
     transition: box-shadow 0.3s ease;
+    border: 2px solid #eee;
 }
 
 .cards-card:hover {
@@ -51,9 +52,11 @@
 }
 
 .cards-card-image img {
-    width: 100%;
-    height: auto;
+    justify-self: center;
+    width: 80%;
     display: block;
+    height: 100px;
+    padding: 10px;
 }
 
 .cards-card-body {
