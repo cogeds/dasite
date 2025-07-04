@@ -15,4 +15,21 @@ export default function decorate(block) {
       }
     });
   });
+
+  // Check if the parent section has the 'category' class
+  const section = block.closest('.section');
+  if (section && section.classList.contains('category')) {
+    console.log('Category section detected');
+
+    [...block.children].forEach((row) => {
+      [...row.children].forEach((col) => {
+        col.classList.add('card'); // Add card class
+        const links = col.querySelectorAll('a');
+        links.forEach((link) => {
+          link.classList.add('card-link'); // Add class to <a> tags
+        });
+      });
+    });
+  }
 }
+ 
